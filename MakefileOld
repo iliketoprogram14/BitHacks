@@ -1,0 +1,17 @@
+#
+# Makefile
+#
+# Randy Miller
+# Bit Hacks
+#
+
+all: sign detect_signs
+
+sign: sign.c
+	gcc -ggdb -std=c99 -Wall -Werror -o compute_sign sign.c
+
+detect_signs: opposite_signs.c
+	gcc -ggdb -std=c99 -Wall -Werror -o detect_signs opposite_signs.c
+
+clean:
+	rm -f *.o a.out compute_sign detect_signs *\~
