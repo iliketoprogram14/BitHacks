@@ -47,7 +47,7 @@ main(int argc, char *argv[]) {
 
     exit = 0;
 
-    printf("Welcome to the bit hacks hub.  This project is meant to show how these work concretely");
+    printf("Welcome to the bit hacks hub.  This project is meant to show how the following bit tricks work concretely\n\n");
     do {
         print_bithacks();
         scanf("%d", &method);

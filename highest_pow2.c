@@ -27,7 +27,7 @@ highest_pow2(void)
     } while (method < FLOAT || method > REGULAR);
     
     //get input
-    printf("Compute the absolute value of: \n");
+    printf("Find the next highest power of 2 of what value? \n");
     scanf("%d", &v);
 
     switch(method) {
