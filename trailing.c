@@ -103,13 +103,13 @@ count_trailing(void)
         break;
     case FLOAT:
         f = (float)(v & -v);
-        result = (*(uint32_t *)&f >> 23) - 0x7f;
+        result = (*(unsigned int *)&f >> 23) - 0x7f;
         break;
     case MODDIV:
         result = Mod37BitPos[(-v & v) & 37];
         break;
     case MULT:
-        result = MultDeBruijnBitPos[((uint32_t)((v & -v) * 0x077CB531U)) >> 27];
+        result = MultDeBruijnBitPos[((unsigned int )((v & -v) * 0x077CB531U)) >> 27];
         break;
     default: return 1; break;
     }
