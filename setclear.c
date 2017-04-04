@@ -41,7 +41,9 @@ setclear(void)
     //get input
     printf("Do you want to set or clear the bits of the word to modify? Type set or clear: \n");
  input:
-    gets(flagstr);
+    while (fgets(flagstr, 6, stdin) == NULL) {
+        printf("Please type set or clear\n");
+    }
 
     flag = UNCHANGED;
     flagstr[0] = tolower((int)flagstr[0]);

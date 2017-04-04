@@ -21,7 +21,9 @@ minmax(void)
     
     //does the user want to compute the min or the max?
     printf("Do you want to compute the min or the max?  Type min or max: ");
-    gets(min_or_max);
+    while (fgets(min_or_max, 3, stdin) == NULL) {
+        printf("Please enter a number with 3 or less digits\n");
+    }
     int strcmpmin = strcmp(min_or_max, "min");
     int strcmpmax = strcmp(min_or_max, "max");
     if (strcmpmin != 0 && strcmpmax != 0) {

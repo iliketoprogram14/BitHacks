@@ -30,7 +30,9 @@ negate(void)
     //get input
     printf("Should we negate the value? Type yes or no: \n");
  input:
-    gets(flagstr);
+    while (fgets(flagstr, 4, stdin) == NULL) {
+        printf("Please type yes or no\n");
+    }
 
     flag = UNCHANGED;
     flagstr[0] = tolower((int)flagstr[0]);
